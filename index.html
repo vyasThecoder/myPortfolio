@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-gray-950 text-white">
+    <!-- Hero Section -->
+    <section
+      class="w-full min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 3xl:px-40 py-10"
+    >
+      <div
+        id="hero-text"
+        class="w-full lg:w-1/2 flex flex-col items-start justify-center gap-2"
+      >
+        <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold flex gap-2">
+          Hi, I'm
+          <span class="text-cyan-400 typewriter-text" id="typewriter"></span>
+        </h1>
+        <h2 class="text-sm sm:text-lg md:text-xl text-cyan-400 font-medium">
+          Front-End Developer | React.js Enthusiast
+        </h2>
+        <p class="text-xs sm:text-sm md:text-base text-gray-300 max-w-xl">
+          I create modern, responsive websites using
+          <span class="text-cyan-400 font-medium">React.js</span> and
+          <span class="text-cyan-400 font-medium">Tailwind CSS</span>.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-4">
+          <a href="#projects">
+            <button
+              class="bg-cyan-950 hover:bg-cyan-700 text-white font-medium px-5 py-2 rounded transition active:scale-95"
+            >
+              View Projects
+            </button>
+          </a>
+          <button
+            class="border border-cyan-400 text-white px-5 py-2 rounded hover:bg-cyan-700 transition active:scale-95"
+          >
+            Download Resume
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="w-full lg:w-1/2 flex justify-center items-center flex-col mb-10 lg:mb-0"
+      >
+        <img
+          src="Images/Heroimage.png"
+          alt="Hero Illustration"
+          class="w-72 sm:w-80 md:w-[350px] lg:w-[400px] h-auto object-contain"
+          loading="lazy"
+          id="hero-img"
+        />
+        <div
+          class="h-16 items-center flex gap-20 justify-center overflow-hidden"
+        >
+          <div class="w-12 h-10 icon" id="icon1">
+            <img
+              src="Images/react-original.svg"
+              alt="React"
+              class="w-full h-full hover:animate-bounce cursor-pointer"
+            />
+          </div>
+          <div class="w-12 h-10 icon" id="icon2">
+            <img
+              src="Images/tailwindCss-removebg-preview.png"
+              alt="Tailwind"
+              class="w-full h-full hover:animate-bounce cursor-pointer"
+            />
+          </div>
+          <div class="w-12 h-10 icon" id="icon3">
+            <img
+              src="Images/github-original.svg"
+              alt="GitHub"
+              class="w-full h-full invert hover:animate-bounce cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="aboutContent"
+      class="w-full bg-gray-900 px-4 py-16 lg:mt-28 mt-16"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div
+          id="about-box"
+          class="flex flex-col lg:flex-row items-center gap-10 opacity-0 translate-x-[-100px]"
+        >
+          <div class="w-full lg:w-1/2 flex flex-col gap-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-cyan-400">
+              About Me
+            </h2>
+            <p class="text-gray-300 text-sm sm:text-base md:text-lg">
+              I'm <span class="text-white font-semibold">Abhishek Vyas</span>, a
+              passionate front-end developer who builds accessible, modern
+              websites using
+              <span class="text-cyan-400 font-medium">React.js</span> and
+              <span class="text-cyan-400 font-medium">Tailwind CSS</span>.
+            </p>
+            <p class="text-gray-400 text-sm sm:text-base">
+              I focus on crafting beautiful UIs and solving real-world problems
+              with clean, efficient code.
+            </p>
+
+            <div class="flex flex-wrap gap-6 mt-6">
+              <!-- Each Skill Icon -->
+              <div
+                class="group relative flex flex-col items-center hover:animate-bounce"
+              >
+                <div class="p-3 bg-gray-950 rounded-full">
+                  <img
+                    src="Images/html5-original.svg"
+                    class="w-10 h-10"
+                    loading="lazy"
+                  />
+                </div>
+                <span class="text-sm mt-2 text-gray-300">HTML</span>
+              </div>
+
+              <div
+                class="group relative flex flex-col items-center hover:animate-bounce"
+              >
+                <div class="p-3 bg-gray-950 rounded-full">
+                  <img src="Images/css3-original.svg" class="w-10 h-10" />
+                </div>
+                <span class="text-sm mt-2 text-gray-300">CSS</span>
+              </div>
+
+              <div
+                class="group relative flex flex-col items-center hover:animate-bounce"
+              >
+                <div class="p-3 bg-gray-950 rounded-full">
+                  <img
+                    src="Images/tailwindCss-removebg-preview.png"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <span class="text-sm mt-2 text-gray-300">Tailwind</span>
+              </div>
+
+              <div
+                class="group relative flex flex-col items-center hover:animate-bounce"
+              >
+                <div class="p-3 bg-gray-950 rounded-full">
+                  <img src="Images/javascript-original.svg" class="w-10 h-10" />
+                </div>
+                <span class="text-sm mt-2 text-gray-300">JavaScript</span>
+              </div>
+
+              <div
+                class="group relative flex flex-col items-center hover:animate-bounce"
+              >
+                <div class="p-3 bg-gray-950 rounded-full">
+                  <img src="Images/react-original.svg" class="w-10 h-10" />
+                </div>
+                <span class="text-sm mt-2 text-gray-300">React.js</span>
+              </div>
+
+              <div
+                class="group relative flex flex-col items-center hover:animate-bounce"
+              >
+                <div class="p-3 bg-gray-950 rounded-full">
+                  <img
+                    src="Images/github-original.svg"
+                    class="w-10 h-10 invert"
+                  />
+                </div>
+                <span class="text-sm mt-2 text-gray-300">GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (you can extend this as needed) -->
+    <section
+      id="projects"
+      class="w-full bg-gray-950 text-white px-4 py-16 lg:mt-28 mt-16"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-cyan-400 text-center lg:mb-28 mb-16">
+          My Projects
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8" id="project-grid">
+          <!-- <div
+            class="bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition-shadow"
+          >
+            <h3 class="text-xl font-semibold text-cyan-400">Quiz App</h3>
+            <p class="text-sm text-gray-300">
+              A simple quiz app with multiple-choice questions, score tracking,
+              and timer.
+            </p>
+            <div class="mt-3">
+              <a href="https://vyasthecoder.github.io/quizApp/" target="_blank">
+                <button
+                  class="bg-cyan-900 hover:bg-cyan-500 text-white px-4 py-2 rounded active:scale-95 transition text-sm"
+                >
+                  Live Demo
+                </button>
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="w-full bg-gray-900 text-white px-4 py-16 text-center lg:mt-28 mt-16"
+    >
+      <div class="max-w-xl mx-auto">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-6">Get In Touch</h2>
+        <p class="text-gray-300 mb-6">
+          Feel free to reach out to me via email, phone, or WhatsApp.
+        </p>
+        <div class="flex flex-col gap-4 text-lg">
+          <a href="tel:+919111042605" class="hover:text-cyan-400 transition"
+            >📞 +91 9111042605</a
+          >
+          <a
+            href="https://wa.me/919111042605"
+            class="hover:text-green-400 transition"
+            >💬 WhatsApp Chat</a
+          >
+          <a
+            href="mailto:abhiv8111@gmail.com"
+            class="hover:text-cyan-400 transition"
+            >📧 abhiv8111@gmail.com</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Html End -->
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
 
   <body class="bg-gray-950 text-white">
     <!-- Hero Section -->
     <section
-      class="w-full min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 3xl:px-40 py-10"
+      class="w-full min-h-screen flex flex-col lg:flex-row items-center lg:justify-between justify-around px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 3xl:px-40 py-10"
     >
       <div
         id="hero-text"
@@ -189,26 +194,10 @@
           My Projects
         </h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8" id="project-grid">
-          <!-- <div
-            class="bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition-shadow"
-          >
-            <h3 class="text-xl font-semibold text-cyan-400">Quiz App</h3>
-            <p class="text-sm text-gray-300">
-              A simple quiz app with multiple-choice questions, score tracking,
-              and timer.
-            </p>
-            <div class="mt-3">
-              <a href="https://vyasthecoder.github.io/quizApp/" target="_blank">
-                <button
-                  class="bg-cyan-900 hover:bg-cyan-500 text-white px-4 py-2 rounded active:scale-95 transition text-sm"
-                >
-                  Live Demo
-                </button>
-              </a>
-            </div>
-          </div> -->
-        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-8"
+          id="project-grid"
+        ></div>
       </div>
     </section>
 
@@ -228,12 +217,12 @@
           >
           <a
             href="https://wa.me/919111042605"
-            class="hover:text-green-400 transition"
+            class="hover:text-green-500 text-green-400 transition"
             >💬 WhatsApp Chat</a
           >
           <a
             href="mailto:abhiv8111@gmail.com"
-            class="hover:text-cyan-400 transition"
+            class="hover:text-cyan-400 text-bule-400 transition"
             >📧 abhiv8111@gmail.com</a
           >
         </div>
@@ -241,12 +230,6 @@
     </section>
 
     <!-- Html End -->
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <!-- Scripts -->
     <script src="script.js"></script>

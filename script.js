@@ -7,6 +7,12 @@ const projectArrey = [
       "A simple Quiz App built with HTML, CSS, and JavaScript. It lets users answer questions and shows the score instantly.",
     demoLink: "https://vyasthecoder.github.io/quizApp/",
   },
+  {
+    name: "World Clock Visualizer",
+    description:
+      "An interactive tool to view real-time clocks for multiple cities worldwide. Built with HTML, Tailwind CSS, and JavaScript, featuring a responsive design and dark mode toggle.",
+    demoLink: "https://vyasthecoder.github.io/worldClock/",
+  },
 ];
 
 function projectsList() {

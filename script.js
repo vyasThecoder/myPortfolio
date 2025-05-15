@@ -1,8 +1,10 @@
-// /Project Arrey
-
-
-
-const projectArrey = [
+const projectArray = [
+  {
+    name: "Memory Flip Game",
+    description:
+      "Memory game with flip animations, timer, and score built using Tailwind, JS, and GSAP. Responsive and interactive for all devices.",
+    demoLink: "https://vyasthecoder.github.io/Memory-Flip-Game/",
+  },
   {
     name: "Quiz App",
     description:
@@ -15,7 +17,7 @@ const projectArrey = [
       "An interactive tool to view real-time clocks for multiple cities worldwide. Built with HTML, Tailwind CSS, and JavaScript, featuring a responsive design and dark mode toggle.",
     demoLink: "https://vyasthecoder.github.io/worldClock/",
   },
-   {
+  {
     name: "Habit Tracker",
     description:
       "A simple and interactive Habit Tracker to help you build good habits and stay consistent daily. Track your progress, set goals, and visualize your streaks easily",
@@ -26,25 +28,23 @@ const projectArrey = [
 function projectsList() {
   let projectBox = document.querySelector("#project-grid");
   let cartProject = "";
-  projectArrey.forEach((val, index) => {
-    cartProject += ` <div
-            class="bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition-shadow"
-            key="${index}"
-          >
-            <h3 class="text-xl font-semibold text-cyan-400">${val.name}</h3>
-            <p class="text-sm text-gray-300">
-              ${val.description}
-            </p>
-            <div class="mt-3">
-              <a href="${val.demoLink}" target="_blank">
-                <button
-                  class="bg-cyan-900 hover:bg-cyan-700 font-medium text-white px-4 py-2 rounded active:scale-95 transition text-sm"
-                >
-                  Live Demo
-                </button>
-              </a>
-            </div>
-          </div>`;
+  projectArray.forEach((val) => {
+    cartProject += ` 
+      <div
+        class="bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-cyan-500/20 transition-shadow"
+      >
+        <h3 class="text-xl font-semibold text-cyan-400">${val.name}</h3>
+        <p class="text-sm text-gray-300">${val.description}</p>
+        <div class="mt-3">
+          <a href="${val.demoLink}" target="_blank" rel="noopener noreferrer">
+            <button
+              class="bg-cyan-900 hover:bg-cyan-700 font-medium text-white px-4 py-2 rounded active:scale-95 transition text-sm"
+            >
+              Live Demo
+            </button>
+          </a>
+        </div>
+      </div>`;
   });
 
   projectBox.innerHTML = cartProject;
@@ -52,7 +52,7 @@ function projectsList() {
 
 projectsList();
 
-// === Typewriter ===
+// Typewriter
 const textEl = document.getElementById("typewriter");
 const words = ["Abhishek Vyas"];
 let wordIndex = 0;
@@ -78,7 +78,7 @@ function type() {
 
 type();
 
-// === GSAP Animation ===
+// GSAP animations (unchanged)
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from("#hero-text", {
@@ -98,7 +98,6 @@ gsap.from("#icon1", { y: 100, duration: 1, delay: 0.5, ease: "power3.out" });
 gsap.from("#icon2", { y: 100, duration: 1, delay: 1.0, ease: "power3.out" });
 gsap.from("#icon3", { y: 100, duration: 1, delay: 1.5, ease: "power3.out" });
 
-// Scroll animation for About inner box only
 gsap.to("#about-box", {
   scrollTrigger: {
     trigger: "#aboutContent",
@@ -112,7 +111,6 @@ gsap.to("#about-box", {
   ease: "power2.out",
 });
 
-// Scroll animation for project cards
 gsap.from("#project-grid > div", {
   scrollTrigger: {
     trigger: "#project-grid",
@@ -125,7 +123,6 @@ gsap.from("#project-grid > div", {
   ease: "power2.out",
 });
 
-// Bounce on scroll for contact section
 gsap.from("#contact", {
   scrollTrigger: {
     trigger: "#contact",

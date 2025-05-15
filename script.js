@@ -1,5 +1,7 @@
 // /Project Arrey
 
+
+
 const projectArrey = [
   {
     name: "Quiz App",
@@ -12,6 +14,12 @@ const projectArrey = [
     description:
       "An interactive tool to view real-time clocks for multiple cities worldwide. Built with HTML, Tailwind CSS, and JavaScript, featuring a responsive design and dark mode toggle.",
     demoLink: "https://vyasthecoder.github.io/worldClock/",
+  },
+   {
+    name: "Habit Tracker",
+    description:
+      "A simple and interactive Habit Tracker to help you build good habits and stay consistent daily. Track your progress, set goals, and visualize your streaks easily",
+    demoLink: "https://vyasthecoder.github.io/Habit-Tracker/",
   },
 ];
 

@@ -23,6 +23,12 @@ const projectArray = [
       "A simple and interactive Habit Tracker to help you build good habits and stay consistent daily. Track your progress, set goals, and visualize your streaks easily",
     demoLink: "https://vyasthecoder.github.io/Habit-Tracker/",
   },
+  {
+    name: "Typing Speed Test",
+    description:
+      "A fast and responsive app to test typing speed and accuracy using HTML, CSS, and JavaScript. It includes a timer, real-time word tracking, and WPM calculation.",
+    demoLink: " https://vyasthecoder.github.io/typingTest/",
+  },
 ];
 
 function projectsList() {

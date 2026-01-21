@@ -1,245 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Tailwind CSS CDN -->
+    <title>Abhishek Vyas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
-
-  <body class="bg-gray-950 text-white">
-    <!-- Hero Section -->
-    <section
-      class="w-full min-h-screen flex flex-col lg:flex-row items-center lg:justify-between justify-around px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 3xl:px-40 py-10"
-    >
+  <body class="bg-gray-950 overflow-x-hidden">
+    <!-- Main Wrapper -->
+    <div class="w-full relative">
+      <!-- ================= HERO SECTION ================= -->
       <div
-        id="hero-text"
-        class="w-full lg:w-1/2 flex flex-col items-start justify-center gap-2"
+        id="hero"
+        class="max-w-6xl min-h-[80vh] mx-auto flex flex-col-reverse md:flex-row justify-center items-center"
       >
-        <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold flex gap-2">
-          Hi, I'm
-          <span class="text-cyan-400 typewriter-text" id="typewriter"></span>
-        </h1>
-        <h2 class="text-sm sm:text-lg md:text-xl text-cyan-400 font-medium">
-          Front-End Developer | React.js Enthusiast
-        </h2>
-        <p class="text-xs sm:text-sm md:text-base text-gray-300 max-w-xl">
-          I create modern, responsive websites using
-          <span class="text-cyan-400 font-medium">React.js</span> and
-          <span class="text-cyan-400 font-medium">Tailwind CSS</span>.
-        </p>
-        <div class="flex flex-wrap gap-4 mt-4">
-          <a href="#projects">
-            <button
-              class="bg-cyan-950 hover:bg-cyan-700 text-white font-medium px-5 py-2 rounded transition active:scale-95"
-            >
-              View Projects
-            </button>
-          </a>
-          <a
-            href="assets/Abhishek_Vyas_Resume.pdf"
-            download
-            class="download-btn"
+        <!-- Left Content -->
+        <div class="flex-1 text-center md:text-left">
+          <h1
+            class="text-2xl sm:text-3xl md:text-5xl text-white leading-tight font-semibold"
           >
-            <button
-              class="border border-cyan-400 text-white px-5 py-2 rounded hover:bg-cyan-700 transition active:scale-95"
+            Hi, I’m
+            <span class="text-cyan-400 font-bold"> Abhishek Vyas </span>
+
+            <span
+              class="block mt-3 text-lg sm:text-xl text-cyan-400 font-medium"
             >
-              Download Resume
-            </button>
-          </a>
+              Front-End Developer | React.js Enthusiast
+            </span>
+          </h1>
+
+          <p class="mt-1 text-slate-400 max-w-xl mx-auto md:mx-0">
+            I build modern, fast and responsive websites using
+            <span class="text-cyan-400 font-medium">React.js</span> &
+            <span class="text-cyan-400 font-medium">Tailwind CSS</span>.
+          </p>
+
+          <!-- Hero CTA Buttons -->
+          <div
+            class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#contact"
+              class="px-8 py-3 rounded-xl font-semibold text-slate-900 bg-cyan-500 hover:bg-cyan-600 transition-all duration-300 shadow-md hover:shadow-lg"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="assets/Abhishek-Frontend.pdf"
+              download
+              class="px-8 py-3 rounded-xl font-semibold bg-slate-900 text-cyan-400 border border-cyan-400 hover:bg-cyan-500 hover:text-slate-900 transition-all duration-300"
+            >
+              Get Resume
+            </a>
+            <a
+              href="#projects"
+              class="px-8 py-3 rounded-xl font-semibold bg-slate-900 text-cyan-400 border border-cyan-400 hover:bg-cyan-500 hover:text-slate-900 transition-all duration-300"
+            >
+              View My Work
+            </a>
+          </div>
+          <!--  -->
+          <div
+            id="hero-icons"
+            class="grid grid-cols-3 md:grid-cols-6 justify-center items-center mt-10 gap-2"
+          ></div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="flex-1 flex items-center justify-center flex-col">
+          <div
+            class="w-52 h-52 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl"
+          >
+            <img
+              src="assets/My-image.png"
+              alt="Abhishek Vyas - Frontend Developer"
+              loading="lazy"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
         </div>
       </div>
 
-      <div
-        class="w-full lg:w-1/2 flex justify-center items-center flex-col mb-10 lg:mb-0"
-      >
-        <img
-          src="assets/Heroimage.png"
-          alt="Hero Illustration"
-          class="w-72 sm:w-80 md:w-[350px] lg:w-[400px] h-auto object-contain"
-          loading="lazy"
-          id="hero-img"
-        />
+      <!-- ================= ABOUT SECTION ================= -->
+      <div class="px-2 w-full py-20 border-cyan-400 border-b">
         <div
-          class="h-16 items-center flex gap-20 justify-center overflow-hidden"
+          class="max-w-6xl flex justify-center items-center gap-5 mx-auto md:flex-row flex-col"
         >
-          <div class="w-12 h-10 icon" id="icon1">
-            <img
-              src="assets/react-original.svg"
-              alt="React"
-              class="w-full h-full hover:animate-bounce cursor-pointer"
-            />
+          <!-- About Text -->
+          <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-mono text-white mb-4">About Me</h2>
+
+            <p class="text-gray-400 leading-relaxed mb-4">
+              I’m a passionate
+              <span class="text-cyan-400 font-semibold"
+                >Frontend Developer</span
+              >
+              who loves building clean, responsive, and user-friendly web
+              interfaces.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+              I specialize in turning designs into fast, interactive, and
+              accessible websites using
+              <span class="text-white">
+                HTML, CSS, Tailwind CSS, JavaScript and React </span
+              >.
+            </p>
+
+            <!-- About CTA -->
+            <div class="mt-8 flex gap-4">
+              <a
+                href="#contact"
+                class="px-7 py-3 rounded-xl font-semibold text-slate-900 bg-cyan-500 hover:bg-cyan-600 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Get In Touch
+              </a>
+              <a
+                href="assets/Abhishek-Frontend.pdf"
+                download
+                class="px-8 py-3 rounded-xl font-semibold bg-slate-900 text-cyan-400 border border-cyan-400 hover:bg-cyan-500 hover:text-slate-900 transition-all duration-300"
+              >
+                Get Resume
+              </a>
+
+              <a
+                href="#projects"
+                class="px-7 py-3 rounded-lg font-semibold bg-slate-900 text-cyan-400 border border-cyan-400 hover:bg-cyan-600 hover:text-slate-900 transition-all duration-300"
+              >
+                View My Work
+              </a>
+            </div>
           </div>
-          <div class="w-12 h-10 icon" id="icon2">
-            <img
-              src="assets/tailwindCss-removebg-preview.png"
-              alt="Tailwind"
-              class="w-full h-full hover:animate-bounce cursor-pointer"
-            />
-          </div>
-          <div class="w-12 h-10 icon" id="icon3">
-            <img
-              src="assets/github-original.svg"
-              alt="GitHub"
-              class="w-full h-full invert hover:animate-bounce cursor-pointer"
-            />
-          </div>
+
+          <!-- About Skills (Injected via JS) -->
+          <div
+            id="aboutShowSkill"
+            class="w-full md:w-1/2 grid gap-4 p-6 rounded-2xl border border-white/20"
+          ></div>
         </div>
       </div>
-    </section>
 
-    <!-- About Section -->
-    <section
-      id="aboutContent"
-      class="w-full bg-gray-900 px-4 py-16 lg:mt-28 mt-16"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div
-          id="about-box"
-          class="flex flex-col lg:flex-row items-center gap-10 opacity-0 translate-x-[-100px]"
-        >
-          <div class="w-full lg:w-1/2 flex flex-col gap-4">
-            <h2 class="text-3xl sm:text-4xl font-bold text-cyan-400">
-              About Me
-            </h2>
-            <p class="text-gray-300 text-sm sm:text-base md:text-lg">
-              I'm <span class="text-white font-semibold">Abhishek Vyas</span>, a
-              passionate front-end developer who builds accessible, modern
-              websites using
-              <span class="text-cyan-400 font-medium">React.js</span> and
-              <span class="text-cyan-400 font-medium">Tailwind CSS</span>.
-            </p>
-            <p class="text-gray-400 text-sm sm:text-base">
-              I focus on crafting beautiful UIs and solving real-world problems
-              with clean, efficient code.
-            </p>
-            <h1 class="text-3xl sm:text-4xl font-bold text-cyan-400 mt-12">
-              Skill
-            </h1>
-            <div class="flex flex-wrap gap-6 mt-2">
-              <!-- Each Skill Icon -->
-              <div
-                class="group relative flex flex-col items-center hover:animate-bounce"
-              >
-                <div class="p-3 bg-gray-950 rounded-full">
-                  <img
-                    src="assets/html5-original.svg"
-                    class="w-10 h-10"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="text-sm mt-2 text-gray-300">HTML</span>
-              </div>
+      <!-- ================= SKILLS SECTION ================= -->
+      <div class="px-2 w-full py-20 border-cyan-400 border-b">
+        <div class="max-w-6xl mx-auto">
+          <h1 class="text-3xl text-white uppercase font-mono text-center">
+            Skills
+          </h1>
 
-              <div
-                class="group relative flex flex-col items-center hover:animate-bounce"
-              >
-                <div class="p-3 bg-gray-950 rounded-full">
-                  <img src="assets/css3-original.svg" class="w-10 h-10" />
-                </div>
-                <span class="text-sm mt-2 text-gray-300">CSS</span>
-              </div>
+          <p class="text-slate-300 text-center mt-2">
+            Tools and technologies I use daily to turn ideas into real websites.
+          </p>
 
-              <div
-                class="group relative flex flex-col items-center hover:animate-bounce"
-              >
-                <div class="p-3 bg-gray-950 rounded-full">
-                  <img
-                    src="assets/tailwindCss-removebg-preview.png"
-                    class="w-10 h-10"
-                  />
-                </div>
-                <span class="text-sm mt-2 text-gray-300">Tailwind</span>
-              </div>
+          <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <!-- Skills Cards -->
+            <div
+              id="skillCardWrapper"
+              class="w-full grid grid-cols-1 sm:grid-cols-2 gap-6"
+            ></div>
 
-              <div
-                class="group relative flex flex-col items-center hover:animate-bounce"
-              >
-                <div class="p-3 bg-gray-950 rounded-full">
-                  <img src="assets/javascript-original.svg" class="w-10 h-10" />
-                </div>
-                <span class="text-sm mt-2 text-gray-300">JavaScript</span>
-              </div>
+            <!-- Why Choose Me -->
+            <div class="bg-slate-900 rounded-2xl p-8 sticky top-5">
+              <h2 class="text-2xl font-semibold text-white mb-6">
+                Why Choose Me?
+              </h2>
 
-              <div
-                class="group relative flex flex-col items-center hover:animate-bounce"
-              >
-                <div class="p-3 bg-gray-950 rounded-full">
-                  <img src="assets/react-original.svg" class="w-10 h-10" />
+              <div class="space-y-5 text-slate-300">
+                <div class="flex gap-4">
+                  <span class="text-cyan-400 text-xl">⚡</span>
+                  <p>
+                    I build fast, optimized and responsive websites that work
+                    smoothly on all devices.
+                  </p>
                 </div>
-                <span class="text-sm mt-2 text-gray-300">React.js</span>
-              </div>
 
-              <div
-                class="group relative flex flex-col items-center hover:animate-bounce"
-              >
-                <div class="p-3 bg-gray-950 rounded-full">
-                  <img
-                    src="assets/github-original.svg"
-                    class="w-10 h-10 invert"
-                  />
+                <div class="flex gap-4">
+                  <span class="text-cyan-400 text-xl">🎯</span>
+                  <p>
+                    I focus on clean UI, user experience and modern design
+                    principles.
+                  </p>
                 </div>
-                <span class="text-sm mt-2 text-gray-300">GitHub</span>
+
+                <div class="flex gap-4">
+                  <span class="text-cyan-400 text-xl">🚀</span>
+                  <p>
+                    I always write clean, scalable and maintainable code using
+                    modern best practices.
+                  </p>
+                </div>
+
+                <div class="flex gap-4">
+                  <span class="text-cyan-400 text-xl">🤝</span>
+                  <p>
+                    I communicate clearly, meet deadlines and take full
+                    responsibility for my work.
+                  </p>
+                </div>
+
+                <div class="flex gap-4">
+                  <span class="text-cyan-400 text-xl">📈</span>
+                  <p>
+                    I continuously learn new technologies to stay updated and
+                    deliver better results.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Projects Section (you can extend this as needed) -->
-    <section
-      id="projects"
-      class="w-full bg-gray-950 text-white px-4 py-10 lg:mt-28 mt-16"
-    >
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-cyan-400 text-center lg:mb-28 mb-16">
-          My Projects
-        </h2>
+      <!-- ================= PROJECTS SECTION ================= -->
+      <div class="px-2 w-full py-20 border-cyan-400 border-b">
+        <div id="projects" class="max-w-6xl mx-auto">
+          <h1 class="text-3xl text-white uppercase font-mono text-center">
+            Projects
+          </h1>
 
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 gap-8"
-          id="project-grid"
-        ></div>
-      </div>
-    </section>
+          <p class="text-slate-300 text-center mt-2">
+            Some projects I’ve built during my frontend journey.
+          </p>
 
-    <!-- Contact Section -->
-    <section
-      id="contact"
-      class="w-full bg-gray-900 text-white px-4 py-16 text-center lg:mt-28 mt-16"
-    >
-      <div class="max-w-xl mx-auto">
-        <h2 class="text-3xl font-bold text-cyan-400 mb-12">Get In Touch</h2>
-        <p class="text-gray-300 mb-6">
-          Feel free to reach out to me via email, phone, or WhatsApp.
-        </p>
-        <div class="flex flex-col gap-4 text-lg">
-          <a href="tel:+919111042605" class="hover:text-cyan-400 transition"
-            >📞 +91 9111042605</a
-          >
-          <a
-            href="https://wa.me/919111042605"
-            class="hover:text-green-500 text-green-400 transition"
-            >💬 WhatsApp Chat</a
-          >
-          <a
-            href="mailto:abhiv8111@gmail.com"
-            class="hover:text-cyan-400 text-blue-400 transition"
-            >📧 abhiv8111@gmail.com</a
-          >
+          <div
+            id="projectCardWrapper"
+            class="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 mt-20"
+          ></div>
         </div>
       </div>
-    </section>
 
-    <!-- Html End -->
+      <!-- ================= CONTACT SECTION ================= -->
+      <div id="contact" class="w-full px-2 py-28">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl font-bold text-white mb-4">Let's Connect</h2>
+          <p class="text-slate-400 mb-10">
+            Feel free to reach out for work or collaboration 👋
+          </p>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+          <div
+            id="contactIcons"
+            class="w-full mx-auto md:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-8"
+          ></div>
+        </div>
+      </div>
+
+      <!-- ================= GO TO TOP BUTTON ================= -->
+      <button
+        id="goTopBtn"
+        aria-label="Go to top"
+        class="fixed bottom-6 right-6 px-3 py-2 z-10 bg-white rounded-full active:scale-95 cursor-pointer"
+      >
+        <i class="fa-solid fa-arrow-down rotate-180"></i>
+      </button>
+    </div>
+
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="/script.js"></script>
   </body>
 </html>

@@ -103,7 +103,7 @@ function renderSkillsSection() {
         <!-- Heading -->
         <div class="flex items-center gap-3 mb-4">
           <i class="${category.iconClass} text-cyan-400 text-2xl"></i>
-          <h3 class="text-slate-100 font-semibold text-sm">
+          <h3 class="text-slate-100 font-semibold text-lg md:text-sm">
             ${category.title}
           </h3>
         </div>
@@ -275,19 +275,19 @@ renderProjectsSection();
 function renderContactIcons() {
   const contactIconsData = [
     {
-      iconClass: "fa-solid fa-phone text-emerald-400",
+      iconClass: "ri-phone-fill text-emerald-400",
       link: "tel:+919111042605",
       hoverBgClass: "hover:bg-emerald-500",
       label: "Call",
     },
     {
-      iconClass: "fa-brands fa-whatsapp text-green-400",
+      iconClass: "ri-whatsapp-line text-green-400",
       link: "https://wa.me/9111042605",
       hoverBgClass: "hover:bg-green-500",
       label: "WhatsApp",
     },
     {
-      iconClass: "fa-brands fa-linkedin text-sky-400",
+      iconClass: "ri-linkedin-fill text-sky-400",
       link: "https://linkedin.com/in/abhishek-vyas-4a8a342b6",
       hoverBgClass: "hover:bg-sky-500",
       label: "LinkedIn",
@@ -372,7 +372,7 @@ function renderHeroIcons() {
         src="${icon}"
         alt="tech icon"
         loading="lazy"
-        class="icons opacity-0 scale-95 w-8 h-8 object-center"
+        class="icons opacity-0 scale-95 w-10 h-10 object-center"
       />
     `;
   });

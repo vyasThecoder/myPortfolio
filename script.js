@@ -185,7 +185,7 @@ function renderProjectsSection() {
   projectsData.forEach((project, index) => {
     projectsContainer.innerHTML += `
       <div class="project-card w-full flex flex-col md:flex-row gap-5 p-6 rounded-2xl 
-        bg-slate-900 border border-slate-700 md:sticky md:top-5
+        bg-slate-900 border border-slate-700
         hover:border-cyan-400 
         hover:shadow-[0_0_30px_rgba(34,211,238,0.25)] 
         transition-all">
@@ -347,45 +347,56 @@ function initGoToTopButton() {
   });
 }
 
-// Initialize
 initGoToTopButton();
 
-const heroIconsArr = [
-  "assets/imgi_5_html5-original.svg",
-  "assets/imgi_6_css3-original.svg",
-  "assets/imgi_7_javascript-original.svg",
-  "assets/imgi_3_tailwindCss-removebg-preview.png",
-  "assets/Bootstrap-img.png",
-  "assets/imgi_2_react-original.svg",
-];
+function renderHeroIcons() {
+  const heroIconsArr = [
+    "assets/imgi_5_html5-original.svg",
+    "assets/imgi_6_css3-original.svg",
+    "assets/imgi_7_javascript-original.svg",
+    "assets/imgi_3_tailwindCss-removebg-preview.png",
+    "assets/Bootstrap-img.png",
+    "assets/imgi_2_react-original.svg",
+  ];
 
-let heroIcon = document.getElementById("hero-icons");
-heroIcon.innerHTML = "";
-heroIconsArr.forEach((icon) => {
-  heroIcon.innerHTML += `<img
-              src="${icon}"
-              alt="${icon}"
-              loading="lazy"
-              class="icons opacity-0 scale-95 h-10 scale-95 object-center"
-            />`;
-});
+  const heroIcon = document.getElementById("hero-icons");
+  if (!heroIcon) return;
 
-// Select all icons
-let icons = document.querySelectorAll(".icons");
+  // Clear old icons
+  heroIcon.innerHTML = "";
 
-// Create a GSAP timeline
-let timeline = gsap.timeline({
-  defaults: {
-    duration: 0.5, // animation duration
-    ease: "power2.out", // easing
-  },
-});
+  // Add icons to DOM
+  heroIconsArr.forEach((icon) => {
+    heroIcon.innerHTML += `
+      <img
+        src="${icon}"
+        alt="tech icon"
+        loading="lazy"
+        class="icons opacity-0 scale-95 h-8 object-center"
+      />
+    `;
+  });
 
-// Animate each icon
-icons.forEach((icon, index) => {
-  timeline.fromTo(
-    icon,
-    { opacity: 0, y: 20, scale: 0.5 }, // initial state
-    { opacity: 1, y: 0, scale: 1, delay: index * 0.1 }, // final state with stagger
-  );
-});
+  // Select all icons
+  const icons = document.querySelectorAll(".icons");
+
+  // GSAP timeline
+  const timeline = gsap.timeline({
+    defaults: {
+      duration: 0.5,
+      ease: "power2.out",
+    },
+  });
+
+  // Animate icons one by one
+  icons.forEach((icon, index) => {
+    timeline.fromTo(
+      icon,
+      { opacity: 0, y: 20, scale: 0.5 },
+      { opacity: 1, y: 0, scale: 1 },
+      index * 0.1, // stagger effect
+    );
+  });
+}
+
+renderHeroIcons();

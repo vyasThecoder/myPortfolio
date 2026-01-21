@@ -372,7 +372,7 @@ function renderHeroIcons() {
         src="${icon}"
         alt="tech icon"
         loading="lazy"
-        class="icons opacity-0 scale-95 h-8 object-center"
+        class="icons opacity-0 scale-95 w-8 h-8 object-center"
       />
     `;
   });

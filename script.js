@@ -148,6 +148,14 @@ renderSkillsSection();
 function renderProjectsSection() {
   const projectsData = [
     {
+      image: "assets/mycafe-project.png",
+      title: "myCafe Website Project",
+      description:
+        "A modern, fully responsive café website with smooth animations, attractive UI, and interactive menu, gallery, and location map sections for a premium online café experience.",
+      technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+      liveLink: "https://vyasthecoder.github.io/myCafe/",
+    },
+    {
       image: "assets/cityCare-project.png",
       title: "Hospital Website Clone",
       description:
